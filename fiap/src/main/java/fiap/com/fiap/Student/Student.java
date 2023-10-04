@@ -13,18 +13,22 @@ import lombok.Data;
 @Entity
 @Data
 public class Student {
-    
-   @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
+    @NotBlank
     String name;
 
     @Size(min = 10)
     String descriptionCourse;
 
-    @Min(1) @Max(100)
+    @Min(1)
+    @Max(100)
     Integer note;
 
-    @Min(0) @Max(100)
+    @Min(0)
+    @Max(100)
     Integer status;
 }
