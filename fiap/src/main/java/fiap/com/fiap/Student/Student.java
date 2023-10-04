@@ -17,23 +17,14 @@ public class Student {
    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    // @NotBlank
-    // String title;
-    @NotBlank
     String name;
 
-    // @Size(min = 10)
-    // String description;
     @Size(min = 10)
     String descriptionCourse;
 
-    // @Min(1) @Max(100)
-    // Integer score;
     @Min(1) @Max(100)
     Integer note;
 
-    // @Min(0) @Max(100)
-    // Integer status;
     @Min(0) @Max(100)
     Integer status;
 }
